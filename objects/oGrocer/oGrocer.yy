@@ -29,7 +29,9 @@
   "physicsShapePoints": [],
   "eventList": [],
   "properties": [],
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"myText","path":"objects/oNpcBase/oNpcBase.yy",},"objectId":{"name":"oNpcBase","path":"objects/oNpcBase/oNpcBase.yy",},"value":"\"BUY MY ORANGES!!\"",},
+  ],
   "parent": {
     "name": "NPCs",
     "path": "folders/Objects/NPCs.yy",

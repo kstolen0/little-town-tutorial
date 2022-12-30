@@ -10,6 +10,7 @@ moveLeft = 0;
 moveUp = 0;
 moveDown = 0;
 nearbyNPC = noone;
+npcPrompt = noone;
 lookRange = 120;
 hasGreeted = false;
 

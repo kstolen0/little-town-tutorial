@@ -3,10 +3,22 @@
 
 event_inherited();
 
-moveRight = keyboard_check(vk_right);
-moveLeft = keyboard_check(vk_left);
-moveUp = keyboard_check(vk_up);
-moveDown = keyboard_check(vk_down);
+
+function detectMovement() {   
+  if (global.playerControl) {
+    moveRight = keyboard_check(vk_right);
+    moveLeft = keyboard_check(vk_left);
+    moveUp = keyboard_check(vk_up);
+    moveDown = keyboard_check(vk_down);
+    return; 
+  }
+  
+  moveRight = 0;
+  moveLeft = 0;
+  moveUp = 0;
+  moveDown = 0;
+}
+
 
 function movePlayer() {
   vx = (moveRight - moveLeft) * walkSpeed;
@@ -57,6 +69,7 @@ function lookForNPCs() {
   
   if (!nearbyNPC) {
     hasGreeted = false;
+    scrDismissPrompt(npcPrompt, 0);
     return;
   }
   
@@ -64,8 +77,13 @@ function lookForNPCs() {
     audio_play_sound(snd_greeting01,1,0);
     hasGreeted = true;
   }
+  
+  if (!npcPrompt) {
+    npcPrompt = scrShowPrompt(nearbyNPC, nearbyNPC.x, nearbyNPC.y-450);
+  }
 }
-    
+
+detectMovement();
 movePlayer();
 updateSprites();
 lookForNPCs();

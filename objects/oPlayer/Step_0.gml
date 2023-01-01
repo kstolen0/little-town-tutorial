@@ -64,8 +64,12 @@ function updateSprites() {
   }
 }
 
+function isWithinRange(type, notMe) {
+  return collision_rectangle(x-lookRange,y-lookRange,x+lookRange,y+lookRange, type, false, notMe);
+}
+
 function lookForNPCs() {
-  nearbyNPC = collision_rectangle(x-lookRange, y-lookRange, x+lookRange, y+lookRange, oNpcBase, false, true);
+  nearbyNPC = isWithinRange(oNpcBase, true);
   
   if (!nearbyNPC) {
     hasGreeted = false;
@@ -83,7 +87,21 @@ function lookForNPCs() {
   }
 }
 
+function lookForItems() {
+  nearbyItem = isWithinRange(oItemBase, false);
+
+  if (!nearbyItem) {
+    scrDismissPrompt(itemPrompt,1);
+    return;
+  }
+  
+  if(!itemPrompt) {
+    itemPrompt = scrShowPrompt(nearbyItem, nearbyItem.x, nearbyItem.y - (nearbyItem.sprite_height*3));
+  }
+}
+
 detectMovement();
 movePlayer();
 updateSprites();
 lookForNPCs();
+lookForItems();

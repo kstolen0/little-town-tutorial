@@ -19,6 +19,7 @@ function scrDismissPrompt(_prompt, _reset) {
       with (oPlayer) {
         switch _reset {
           case 0: npcPrompt = noone;
+          case 1: itemPrompt = noone;
         }
       }
     }

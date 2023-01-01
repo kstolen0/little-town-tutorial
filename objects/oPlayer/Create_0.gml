@@ -1,6 +1,20 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+state = PlayerState.idle;
+
+// idle
+playerSpr[PlayerState.idle][Facing.right] = sPlayerIdleRight;
+playerSpr[PlayerState.idle][Facing.up] = sPlayerIdleUp;
+playerSpr[PlayerState.idle][Facing.left] = sPlayerIdleLeft;
+playerSpr[PlayerState.idle][Facing.down] = sPlayerIdleDown;
+
+// walking
+playerSpr[PlayerState.walking][Facing.right] = sPlayerWalkRight;
+playerSpr[PlayerState.walking][Facing.up] = sPlayerWalkUp;
+playerSpr[PlayerState.walking][Facing.left] = sPlayerWalkLeft;
+playerSpr[PlayerState.walking][Facing.down] = sPlayerWalkDown;
+
 walkSpeed = 16;
 vx = 0;
 vy = 0;

@@ -3,13 +3,34 @@
 
 event_inherited();
 
+function setDirection() { 
+  if (moveDown) {
+    dir = Facing.down;
+  }
 
-function detectMovement() {   
+  if (moveUp) {
+    dir = Facing.up
+  }
+
+  if (moveRight) {
+    dir = Facing.right;
+  }
+
+  if (moveLeft) {
+    dir = Facing.left;
+  }
+}
+
+function detectMovement() {
+    
   if (global.playerControl) {
     moveRight = keyboard_check(vk_right);
     moveLeft = keyboard_check(vk_left);
     moveUp = keyboard_check(vk_up);
     moveDown = keyboard_check(vk_down);
+    
+    setDirection();
+    
     return; 
   }
   
@@ -32,36 +53,17 @@ function movePlayer() {
     y += vy;
   }
   
+  state = PlayerState.idle;
+  if (vx != 0 || vy != 0) {
+    state = PlayerState.walking;
+  }
+  
   audio_listener_set_position(0,x,y,0);
 }
 
 function updateSprites() {
-  switch dir {
-    case 0: sprite_index = sPlayerIdleRight; break;
-    case 1: sprite_index = sPlayerIdleUp; break;
-    case 2: sprite_index = sPlayerIdleLeft; break;
-    default: sprite_index = sPlayerIdleDown;
-  }
-
-  if (moveDown) {
-    sprite_index = sPlayerWalkDown;
-    dir = 3;
-  }
-
-  if (moveUp) {
-    sprite_index = sPlayerWalkUp;
-    dir = 1
-  }
-
-  if (moveRight) {
-    sprite_index = sPlayerWalkRight;
-    dir = 0;
-  }
-
-  if (moveLeft) {
-    sprite_index = sPlayerWalkLeft;
-    dir = 2;
-  }
+  
+  sprite_index = playerSpr[state][dir];
 }
 
 function isWithinRange(type, notMe) {

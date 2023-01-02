@@ -28,6 +28,7 @@ function detectMovement() {
     moveLeft = keyboard_check(vk_left);
     moveUp = keyboard_check(vk_up);
     moveDown = keyboard_check(vk_down);
+    running = keyboard_check(vk_shift);
     
     setDirection();
     
@@ -40,10 +41,43 @@ function detectMovement() {
   moveDown = 0;
 }
 
+function updatePlayerState() {
+  
+  if (state == PlayerState.pickingUp) {
+    if (image_index >= image_number - 1) {
+      state = PlayerState.carrying;
+      global.playerControl = true;
+    }
+    return;
+  }
+  
+  if (state == PlayerState.puttingDown) {
+    if (image_index >= image_number - 1) {
+      state = PlayerState.idle;
+      global.playerControl = true;
+    }
+    return;
+  }
+
+  if (vx != 0 || vy != 0) {    
+    state = hasItem ? PlayerState.carrying : PlayerState.walking;
+    return;
+  }
+  
+  state = hasItem ? PlayerState.carryIdle : PlayerState.idle;
+}
+
 
 function movePlayer() {
-  vx = (moveRight - moveLeft) * walkSpeed;
-  vy = (moveDown - moveUp) * walkSpeed;
+  
+  if (running && runSpeed < runMax) {
+    runSpeed += 1;
+  } else if (runSpeed > 0) {
+    runSpeed -= 1;
+  }
+  
+  vx = (moveRight - moveLeft) * (walkSpeed+runSpeed) * (1-carryLimit);
+  vy = (moveDown - moveUp) * (walkSpeed+runSpeed) * (1-carryLimit);
 
   if (!collision_point(x+vx, y, oEnvBase, true, true)) {
     x += vx;
@@ -53,10 +87,7 @@ function movePlayer() {
     y += vy;
   }
   
-  state = PlayerState.idle;
-  if (vx != 0 || vy != 0) {
-    state = PlayerState.walking;
-  }
+  updatePlayerState();
   
   audio_listener_set_position(0,x,y,0);
 }
@@ -90,14 +121,19 @@ function lookForNPCs() {
 }
 
 function lookForItems() {
+  if (hasItem) {
+    nearbyItem = noone;
+    return;
+  }
+  
   nearbyItem = isWithinRange(oItemBase, false);
 
-  if (!nearbyItem) {
+  if (!nearbyItem || nearbyNPC) {
     scrDismissPrompt(itemPrompt,1);
     return;
   }
   
-  if(!itemPrompt) {
+  if (!itemPrompt && !hasItem) {
     itemPrompt = scrShowPrompt(nearbyItem, nearbyItem.x, nearbyItem.y - (nearbyItem.sprite_height*3));
   }
 }

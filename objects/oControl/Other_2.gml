@@ -17,3 +17,10 @@ enum Facing {
   left,
   down,
 }
+
+enum ItemState {
+  idle,
+  taken,
+  used,
+  puttingBack,
+}

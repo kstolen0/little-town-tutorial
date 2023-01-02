@@ -69,7 +69,7 @@ function setupPlayerSprites() {
 setupPlayerSprites();
 
 
-walkSpeed = 16;
+walkSpeed = 8;
 vx = 0;
 vy = 0;
 dir = 3;
@@ -91,6 +91,8 @@ carryLimit = 0;
 runSpeed = 0;
 runMax = 6;
 running = false;
+
+startDust = 0;
 
 audio_listener_set_position(0,x,y,0);
 audio_listener_set_orientation(0,0,1,0,0,0,1);

@@ -67,14 +67,27 @@ function updatePlayerState() {
   state = hasItem ? PlayerState.carryIdle : PlayerState.idle;
 }
 
+function createDust() {
+  if (running) {
+    if (!startDust) {
+      startDust = 1;
+      alarm[0] = 2;
+    }    
+    
+    return;
+  }
+  
+  startDust = 0;  
+}
 
 function movePlayer() {
-  
   if (running && runSpeed < runMax) {
     runSpeed += 1;
   } else if (runSpeed > 0) {
     runSpeed -= 1;
   }
+  
+  createDust();
   
   vx = (moveRight - moveLeft) * (walkSpeed+runSpeed) * (1-carryLimit);
   vy = (moveDown - moveUp) * (walkSpeed+runSpeed) * (1-carryLimit);

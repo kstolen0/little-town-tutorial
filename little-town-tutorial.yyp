@@ -63,6 +63,7 @@
     {"id":{"name":"sScale","path":"sprites/sScale/sScale.yy",},"order":3,},
     {"id":{"name":"tiles_town","path":"tilesets/tiles_town/tiles_town.yy",},"order":0,},
     {"id":{"name":"snd_greeting01","path":"sounds/snd_greeting01/snd_greeting01.yy",},"order":2,},
+    {"id":{"name":"oDust","path":"objects/oDust/oDust.yy",},"order":12,},
     {"id":{"name":"sPlayerWalkLeft","path":"sprites/sPlayerWalkLeft/sPlayerWalkLeft.yy",},"order":1,},
     {"id":{"name":"sBakerIdleDown","path":"sprites/sBakerIdleDown/sBakerIdleDown.yy",},"order":0,},
     {"id":{"name":"oRollingPin","path":"objects/oRollingPin/oRollingPin.yy",},"order":1,},

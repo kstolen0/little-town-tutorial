@@ -84,7 +84,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "NPCs",
-    "path": "folders/Sprites/NPCs.yy",
+    "name": "baker",
+    "path": "folders/Sprites/NPCs/baker.yy",
   },
 }

@@ -16,6 +16,7 @@
     {"inherit":false,"visible":false,"xview":0,"yview":0,"wview":1366,"hview":768,"xport":0,"yport":0,"wport":1366,"hport":768,"hborder":32,"vborder":32,"hspeed":-1,"vspeed":-1,"objectId":null,},
   ],
   "layers": [
+    {"resourceType":"GMRAssetLayer","resourceVersion":"1.0","name":"Cutscenes","depth":-200,"assets":[],"visible":true,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Blocks","instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_7DDF6A4B","properties":[],"isDnd":false,"objectId":{"name":"oBlock","path":"objects/oBlock/oBlock.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":20.84,"scaleY":1.16,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":-64.0,"y":-96.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_7F7B9AB2","properties":[],"isDnd":false,"objectId":{"name":"oBlock","path":"objects/oBlock/oBlock.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.16,"scaleY":12.839999,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":3968.0,"y":-64.0,},

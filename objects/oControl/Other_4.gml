@@ -8,3 +8,9 @@ switch (room) {
     break;
   }
 }
+
+if (layer_exists("Cutscenes")) {
+  currentSequenceLayer = "Cutscenes";
+} else {
+  currentSequenceLayer = "Instances";
+}

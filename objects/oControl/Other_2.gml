@@ -2,6 +2,7 @@
 // You can write your code in this editor
 
 global.playerControl = true;
+
 enum PlayerState {
   idle,
   walking,
@@ -24,3 +25,14 @@ enum ItemState {
   used,
   puttingBack,
 }
+
+enum SequenceState {
+  notPlaying,
+  waiting,
+  playing,
+  finished,
+}
+
+sequenceState = SequenceState.notPlaying;
+currentSequenceLayer = noone;
+currentSequence = noone;

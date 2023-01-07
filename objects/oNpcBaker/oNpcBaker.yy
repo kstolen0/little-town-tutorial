@@ -30,7 +30,14 @@
   "eventList": [],
   "properties": [],
   "overriddenProperties": [
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"myText","path":"objects/oNpcBase/oNpcBase.yy",},"objectId":{"name":"oNpcBase","path":"objects/oNpcBase/oNpcBase.yy",},"value":"\"I'm so tired...\"",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"myText","path":"objects/oNpcBase/oNpcBase.yy",},"objectId":{"name":"oNpcBase","path":"objects/oNpcBase/oNpcBase.yy",},"value":"\"I sure wish I had something to help me bake these pies...\"",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"myItem","path":"objects/oNpcBase/oNpcBase.yy",},"objectId":{"name":"oNpcBase","path":"objects/oNpcBase/oNpcBase.yy",},"value":"oRollingPin",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"itemTextHappy","path":"objects/oNpcBase/oNpcBase.yy",},"objectId":{"name":"oNpcBase","path":"objects/oNpcBase/oNpcBase.yy",},"value":"\"Is that what I think it is?\"",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"itemTextSad","path":"objects/oNpcBase/oNpcBase.yy",},"objectId":{"name":"oNpcBase","path":"objects/oNpcBase/oNpcBase.yy",},"value":"\"What is that supposed to be?\"",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"itemTextDone","path":"objects/oNpcBase/oNpcBase.yy",},"objectId":{"name":"oNpcBase","path":"objects/oNpcBase/oNpcBase.yy",},"value":"\"Thank you! Now I can bake my pies!\"",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"sequenceHappy","path":"objects/oNpcBase/oNpcBase.yy",},"objectId":{"name":"oNpcBase","path":"objects/oNpcBase/oNpcBase.yy",},"value":"seqBakerHappy",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"sequenceSad","path":"objects/oNpcBase/oNpcBase.yy",},"objectId":{"name":"oNpcBase","path":"objects/oNpcBase/oNpcBase.yy",},"value":"seqBakerSad",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"doneSprite","path":"objects/oNpcBase/oNpcBase.yy",},"objectId":{"name":"oNpcBase","path":"objects/oNpcBase/oNpcBase.yy",},"value":"sBakerHappyDown",},
   ],
   "parent": {
     "name": "NPCs",

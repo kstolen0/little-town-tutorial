@@ -38,6 +38,11 @@ enum SequenceState {
   finished,
 }
 
+enum NPCState {
+  normal,
+  done,
+}
+
 sequenceState = SequenceState.notPlaying;
 currentSequenceLayer = noone;
 currentSequence = noone;

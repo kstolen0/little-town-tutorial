@@ -80,6 +80,18 @@ function createDust() {
   startDust = 0;  
 }
 
+function setListener() {
+  if (instance_exists(oControl) && oControl.sequenceState == SequenceState.playing) {
+    var _camX = camera_get_view_x(view_camera[0])+floor(camera_get_view_width(view_camera[0])*0.5);
+    var _camY = camera_get_view_y(view_camera[0])+floor(camera_get_view_height(view_camera[0])*0.5);
+    audio_listener_set_position(0,_camX,_camY,0);
+    
+    return;
+  }
+  
+  audio_listener_set_position(0,x,y,0);
+}
+
 function movePlayer() {
   if (running && runSpeed < runMax) {
     runSpeed += 1;
@@ -102,7 +114,7 @@ function movePlayer() {
   
   updatePlayerState();
   
-  audio_listener_set_position(0,x,y,0);
+  setListener();
 }
 
 function updateSprites() {

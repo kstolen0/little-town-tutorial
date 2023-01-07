@@ -8,3 +8,5 @@ fadeMe = 0;
 fadeSpeed = 0.1;
 image_alpha = 0;
 audio_play_sound(snd_pop01,1,0);
+
+sequenceToShow = noone;

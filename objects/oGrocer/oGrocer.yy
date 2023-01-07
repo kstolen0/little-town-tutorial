@@ -30,7 +30,14 @@
   "eventList": [],
   "properties": [],
   "overriddenProperties": [
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"myText","path":"objects/oNpcBase/oNpcBase.yy",},"objectId":{"name":"oNpcBase","path":"objects/oNpcBase/oNpcBase.yy",},"value":"\"BUY MY ORANGES!!\"",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"myText","path":"objects/oNpcBase/oNpcBase.yy",},"objectId":{"name":"oNpcBase","path":"objects/oNpcBase/oNpcBase.yy",},"value":"\"My veggies are looking awfuly dry...\"",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"myItem","path":"objects/oNpcBase/oNpcBase.yy",},"objectId":{"name":"oNpcBase","path":"objects/oNpcBase/oNpcBase.yy",},"value":"oWateringCan",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"itemTextHappy","path":"objects/oNpcBase/oNpcBase.yy",},"objectId":{"name":"oNpcBase","path":"objects/oNpcBase/oNpcBase.yy",},"value":"\"Oh, a watering can! Perfect!\"",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"itemTextSad","path":"objects/oNpcBase/oNpcBase.yy",},"objectId":{"name":"oNpcBase","path":"objects/oNpcBase/oNpcBase.yy",},"value":"\"What is that?\"",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"itemTextDone","path":"objects/oNpcBase/oNpcBase.yy",},"objectId":{"name":"oNpcBase","path":"objects/oNpcBase/oNpcBase.yy",},"value":"\"With that watering can, my veggies will be perfect!\"",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"sequenceHappy","path":"objects/oNpcBase/oNpcBase.yy",},"objectId":{"name":"oNpcBase","path":"objects/oNpcBase/oNpcBase.yy",},"value":"seqGrocerHappy",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"sequenceSad","path":"objects/oNpcBase/oNpcBase.yy",},"objectId":{"name":"oNpcBase","path":"objects/oNpcBase/oNpcBase.yy",},"value":"seqGrocerAngry",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"doneSprite","path":"objects/oNpcBase/oNpcBase.yy",},"objectId":{"name":"oNpcBase","path":"objects/oNpcBase/oNpcBase.yy",},"value":"sGrocerIdleHappy",},
   ],
   "parent": {
     "name": "NPCs",

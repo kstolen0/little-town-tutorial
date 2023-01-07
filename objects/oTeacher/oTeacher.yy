@@ -30,7 +30,14 @@
   "eventList": [],
   "properties": [],
   "overriddenProperties": [
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"myText","path":"objects/oNpcBase/oNpcBase.yy",},"objectId":{"name":"oNpcBase","path":"objects/oNpcBase/oNpcBase.yy",},"value":"\"\\\"i\\\" before \\\"e\\\" except after \\\"c\\\"!\"",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"myText","path":"objects/oNpcBase/oNpcBase.yy",},"objectId":{"name":"oNpcBase","path":"objects/oNpcBase/oNpcBase.yy",},"value":"\"I wish I had something to eat before class...\"",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"myItem","path":"objects/oNpcBase/oNpcBase.yy",},"objectId":{"name":"oNpcBase","path":"objects/oNpcBase/oNpcBase.yy",},"value":"oApple",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"itemTextHappy","path":"objects/oNpcBase/oNpcBase.yy",},"objectId":{"name":"oNpcBase","path":"objects/oNpcBase/oNpcBase.yy",},"value":"\"An apple?? How thoughtful!\"",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"itemTextSad","path":"objects/oNpcBase/oNpcBase.yy",},"objectId":{"name":"oNpcBase","path":"objects/oNpcBase/oNpcBase.yy",},"value":"\"Oh, um, what have you there?\"",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"itemTextDone","path":"objects/oNpcBase/oNpcBase.yy",},"objectId":{"name":"oNpcBase","path":"objects/oNpcBase/oNpcBase.yy",},"value":"\"Thanks to you, I could teach all day!\"",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"sequenceHappy","path":"objects/oNpcBase/oNpcBase.yy",},"objectId":{"name":"oNpcBase","path":"objects/oNpcBase/oNpcBase.yy",},"value":"seqTeacherHappy",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"sequenceSad","path":"objects/oNpcBase/oNpcBase.yy",},"objectId":{"name":"oNpcBase","path":"objects/oNpcBase/oNpcBase.yy",},"value":"seqTeacherSad",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"doneSprite","path":"objects/oNpcBase/oNpcBase.yy",},"objectId":{"name":"oNpcBase","path":"objects/oNpcBase/oNpcBase.yy",},"value":"sTeacherIdleHappy",},
   ],
   "parent": {
     "name": "NPCs",

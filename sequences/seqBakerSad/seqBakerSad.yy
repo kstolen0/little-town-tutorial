@@ -203,7 +203,7 @@
   "eventToFunction": {},
   "eventStubScript": null,
   "parent": {
-    "name": "Sequences",
-    "path": "folders/Sequences.yy",
+    "name": "npc-sequences",
+    "path": "folders/Sequences/npc-sequences.yy",
   },
 }

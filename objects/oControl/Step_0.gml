@@ -13,6 +13,18 @@ function fadeInAudio(audio, maxVolume) {
   }
 }
 
+function isGameOver() {
+  if (!global.gameOver) {
+    if (instance_exists(oNpcBaker) && instance_exists(oTeacher) && instance_exists(oGrocer)) {
+      if (oNpcBaker.state == NPCState.done &&  oGrocer.state = NPCState.done && oTeacher.state == NPCState.done) {
+        global.playerControl = false;
+        alarm[0] = 60;
+        global.gameOver = true;
+      }
+    }
+  }
+}
+
 switch sequenceState {
   case SequenceState.playing: {
     fadeOutAudio(snd_townBGM);
@@ -31,6 +43,7 @@ switch sequenceState {
     
     global.playerControl = true;
     sequenceState = SequenceState.notPlaying;
+    isGameOver();
     break;
   }
 }

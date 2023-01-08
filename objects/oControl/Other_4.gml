@@ -7,6 +7,10 @@ switch (room) {
     audio_play_sound(snd_townAmbience,1,1);
     break;
   }
+  case rmMainTitle: {
+    audio_play_sound(snd_seq_good01_BGM,1,1);
+    break;
+  }
 }
 
 if (layer_exists("Cutscenes")) {
